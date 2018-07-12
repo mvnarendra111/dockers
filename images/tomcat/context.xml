@@ -32,6 +32,6 @@
                maxActive="50" maxIdle="30" maxWait="10000"
                username="student" password="student@1"
                driverClassName="com.mysql.jdbc.Driver"
-               url="jdbc:mysql://10.142.0.7:3306/studentapp"/>
+               url="jdbc:mysql://${DBIP}:3306/studentapp"/>
 
 </Context>

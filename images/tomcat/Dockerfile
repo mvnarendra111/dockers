@@ -8,8 +8,9 @@ RUN rm -rf /tomcat/webapps/*
 ADD https://github.com/cit-aliqui/APP-STACK/raw/master/student.war /tomcat/webapps
 ADD https://github.com/cit-aliqui/APP-STACK/raw/master/mysql-connector-java-5.1.40.jar /tomcat/lib
 COPY context.xml /tomcat/conf
+COPY catalina.sh /tomcat/bin
 COPY tomcat.sh /
-RUN chmod +x /tomcat.sh
+RUN chmod +x /tomcat.sh /tomcat/bin/catalina.sh
 EXPOSE 8080
 EXPOSE 8009
 CMD /tomcat.sh 
