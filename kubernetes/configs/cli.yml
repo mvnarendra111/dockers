@@ -1,0 +1,10 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: cli 
+spec:
+  containers:
+    - name: centos
+      image: centos
+      command: ["sleep"]
+      args: ["10000"]
